@@ -120,6 +120,11 @@ nav ul li {
   border-radius: 80px;
 }
 
+nav a {
+  text-decoration: none;
+  color: rgb(34, 31, 32);
+}
+
 /* ---------------------------- */
 /* Styling content */
 
