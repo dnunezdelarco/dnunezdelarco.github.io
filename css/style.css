@@ -1,0 +1,858 @@
+/* ---------------------------- */
+/* Importing fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Caveat+Brush&family=Gugi&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Gugi&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Caveat+Brush&family=Gugi&family=Lilita+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Shadows+Into+Light&display=swap');
+
+/* ---------------------------- */
+/* Styling body */
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 20px;
+  max-width: 2000px;
+  margin: auto;
+  grid-template-areas:
+    "title navigation"
+    "title navigation"
+    "content content"
+    "footer footer";
+  font-family: "Open Sans", "Helvetica", sans-serif;
+  line-height: 1.5;
+  font-size: 40px;
+}
+
+/* ---------------------------- */
+/* Styling header */
+
+header {
+  padding-top: 50px;
+  grid-area: title;
+  text-align: center;
+}
+
+header h2 {
+  font-family: "Lilita One", Arial, sans-serif;
+  line-height: 0.05;
+  font-size: 180px;
+  color:rgb(176, 50, 51);
+}
+
+h1 {
+  font-family: "Bowlby One SC", Arial, sans-serif;
+  color: rgb(34, 31, 32);
+  line-height: 0.05;
+  font-size: 240px;
+  margin-bottom: 80px;
+}
+
+h2 {
+  font-family: "Bowlby One SC", Arial, sans-serif;
+  color: rgb(34, 31, 32);
+  line-height: 0.05;
+  font-size: 130px;
+}
+
+h3 {
+  font-family: "Lilita One", Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  line-height: 0.05;
+  font-size: 90px;
+}
+
+/* ---------------------------- */
+/* Styling nav */
+
+nav {
+  grid-area: navigation;
+  font-family: "Lilita One", sans-serif;
+  color: rgb(34, 31, 32);
+  padding-bottom: 30px;
+  border-radius: 100px;
+  margin-top: 100px;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+  margin: auto;
+  grid-template-areas:
+    "nav-intro nav-geography"
+    "nav-people nav-additional";
+  list-style-type: none; 
+  text-align: center;
+  list-style-type: none;
+  font-size: 50px;
+  padding: 0px 30px;
+}
+
+#nav-introduction {
+  grid-area: nav-intro;
+}
+
+#nav-geography {
+  grid-area: nav-geography;
+}
+
+#nav-people {
+  grid-area: nav-people;
+}
+
+#nav-additional {
+  grid-area: nav-additional;
+  height: 100px;
+  padding: 40px 0px;
+}
+
+nav ul li {
+  padding-bottom: 0;
+  line-height: 1;
+  box-sizing: content-box;
+  background-color: rgb(243, 211, 143);
+  width: 100%;
+  padding: 65px 0px;
+  height: 50px;
+  border-radius: 80px;
+}
+
+/* ---------------------------- */
+/* Styling content */
+
+main {
+  grid-area: content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-gap: 10px;
+  margin: auto;
+  grid-template-areas:
+    "introduction introduction introduction"
+    "geography geography geography"
+    "people people people"
+    "additional additional additional";
+}
+
+/* ---------------------------- */
+/* Styling introduction */
+
+#introduction {
+  grid-area: introduction;
+  padding: 55px 50px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: 
+    "intro intro"
+    "nav nav"
+    "ancient-history ancient-history"
+    "flag british-rule"
+    "flag british-rule"
+    "modern-day modern-day";
+  grid-gap: 40px;
+  background-color: rgb(172, 48, 50, 0.25);
+  border-radius: 100px;
+  margin-top: 30px;
+  padding-top: 30px;
+}
+
+#introduction h2,
+#geography h2,
+#people-and-society h2 {
+  grid-area: intro;
+  margin: 0px;
+  padding-top: 100px;
+  height: 60px;
+  line-height: 0px;
+  background-color: rgb(172, 48, 50, 0);
+  text-align: center;
+}
+
+#flag {
+  grid-area: flag;
+  width: 800px;
+  margin: 0px;
+  padding-top: 80px;
+}
+
+#flag img {
+  width: 830px;
+  height: auto;
+}
+
+#introduction nav,
+#people-and-society nav {
+  background-color: rgb(172, 48, 50, 0.5);
+}
+
+#introduction nav, 
+#geography nav,
+#people-and-society nav {
+  grid-area: nav;
+  margin-top: 0px;
+  border-bottom: none;
+  display: flex; 
+  justify-content: center; 
+  padding: 0;
+  border-radius: 40px;
+}
+
+#introduction nav ul, 
+#geography nav ul,
+#people-and-society nav ul {
+  display: flex; 
+  list-style-type: none; 
+  margin: 0;
+  padding: 10px;
+}
+
+#introduction nav ul li, 
+#geography nav ul li,
+#people-and-society nav ul li {
+  padding: 10px 100px; 
+  margin-left: 0; 
+  background-color: rgb(172, 48, 50, 0);
+  width: auto;
+  white-space: nowrap;
+}
+
+/* ---------------------------- */
+
+#ancient-history {
+  grid-area: ancient-history;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: 
+  "heading pyramids"
+  "p1 pyramids"
+  "p2 pyramids"
+  "p3 p3";
+}
+
+#ancient-history h3 {
+  grid-area: heading;
+}
+
+#ancient-history-1 {
+  grid-area: p1;
+}
+
+#ancient-history-2 {
+  grid-area: p2;
+}
+
+#ancient-history-3 {
+  grid-area: p3;
+  column-count: 2;
+  column-gap: 40px; 
+}
+
+#ancient-history-1, #ancient-history-2, #ancient-history-3 {
+  margin-top: 0px;
+  padding-right: 40px;
+}
+
+#pyramids {
+  grid-area: pyramids;
+  margin: 140px 0px 0px 0px;
+}
+
+#pyramids img {
+  width: 900px;
+}
+
+/* ---------------------------- */
+
+#british-rule {
+  grid-area: british-rule;
+  width:920px;
+  margin-left: 40px;
+}
+
+/* ---------------------------- */
+
+#modern-day-issues {
+  grid-area: modern-day;
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+    "heading tahrir"
+    "p1 tahrir"
+    "multi-column multi-column";
+}
+
+#modern-day-issues h3 {
+  grid-area: heading;
+  margin-bottom: 90px;
+}
+
+#modern-day-1 {
+  grid-area: p1;
+  margin-top: 0px;
+}
+
+.multi-column {
+  grid-area: multi-column;
+  column-count: 2; 
+  column-gap: 40px; 
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+.multi-column p {
+  margin: 0 0 40px 0; 
+}
+
+#tahrir {
+  grid-area: tahrir;
+  margin-top: 160px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+#tahrir img{
+  width: 875px;
+}
+
+#ancient-history, #modern-day-issues, #british-rule  {
+  background-color:rgb(172, 48, 50);
+  padding: 0px 50px;
+  color: rgb(255, 255, 255);
+  border-radius: 80px;
+}
+
+/* ---------------------------- */
+/* Styling Geography */
+
+#geography {
+  grid-area: geography;
+  padding: 55px 50px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: 
+    "intro"
+    "nav"
+    "location"
+    "climate"
+    "natural-resources";
+  grid-gap: 40px;
+  background-color: rgba(243, 211, 143, 0.25);
+  border-radius: 100px;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
+#geography h2 {
+  grid-area: intro;
+}
+
+#geography h3 {
+  color: rgb(34, 31, 32);
+}
+
+#geography nav {
+  grid-area: nav;
+  background-color: rgba(243, 211, 143, 0.5);
+}
+
+#geography a:visited, #geography a {
+  color: rgb(34, 31, 32);
+}
+
+#geography a:hover, #geography a:active {
+  color: rgb(255, 255, 255);
+}
+
+/* ---------------------------- */
+
+#location {
+  grid-area: location;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: 
+  "maritime heading"
+  "maritime p1"
+  "maritime p2"
+  "map1 map2";
+}
+
+#location h3 {
+  grid-area:heading;
+}
+
+#location-p1 {
+  grid-area:p1;
+}
+
+#location-p2 {
+  grid-area:p2;
+}
+
+#egypt-map {
+  grid-area:map1;
+  margin-left: 0px;
+}
+
+#egypt-usa-map{
+  grid-area:map2;
+  margin-left: 0px;
+}
+
+#egypt-map img, #egypt-usa-map img {
+  height: 750px;
+  width: auto;
+}
+
+#maritime {
+  width: 997px;
+}
+
+#maritime, 
+#land-use,
+#egypt-population,
+#fertility,
+#mortality,
+#structure {
+  grid-area:maritime;
+  background-color: rgb(244,227,190);
+  width: 95%;
+  margin: 50px 0px;
+  border-collapse: collapse;
+  border: 1px solid rgb(218, 175, 84,0);
+}
+
+#maritime th, 
+#land-use th,
+#egypt-population th,
+#mortality th,
+#fertility th,
+#structure th {
+  background-color: rgb(218, 175, 84);
+}
+
+#maritime-1, 
+#land-use-1,
+#egypt-population-1,
+#mortality-1,
+#fertility-1,
+#structure-1 {
+  border-radius: 50px 0px 0px 0px;
+}
+
+#maritime-2, 
+#land-use-2, 
+#egypt-population-2,
+#mortality-2,
+#fertility-2,
+#structure-2 {
+  border-radius: 0px 50px 0px 0px;
+}
+
+#location-p1, #location-p2, #egypt-map, #egypt-usa-map {
+  margin-top: 0px;
+}
+
+#location, #climate, #resources {
+  background-color:rgb(243, 211, 143);
+  padding: 0px 50px;
+  color: rgb(34, 31, 32);
+  border-radius: 80px;
+}
+
+/* ---------------------------- */
+
+#climate {
+  grid-area: climate;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+  "heading dunes"
+  "p1 dunes"
+  "list dunes";
+}
+
+#climate h3 {
+  grid-area: heading;
+  margin-bottom: 90px;
+}
+
+#climate p {
+  grid-area: p1;
+}
+
+#climate ul {
+  grid-area: list;
+  column-count: 2;
+  margin-left: 100px;
+}
+
+#climate p, #climate ul {
+  margin-top: 0px;
+}
+
+#dunes {
+  grid-area: dunes;
+  margin: 50px 0px 0px 50px ;
+}
+
+#dunes img {
+  width: 850px;
+  height: auto; 
+}
+
+/* ---------------------------- */
+
+#resources {
+  grid-area: natural-resources;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+  "heading heading"
+  "p1 land-use"
+  "list land-use";
+}
+
+#resources h3 {
+  grid-area: heading;
+}
+
+#resources-p1 {
+  grid-area: p1;
+  margin-bottom: 0px;
+}
+
+#land-use{
+  grid-area: land-use;
+  margin-top: 0px;
+}
+
+#resources ul {
+  grid-area: list;
+  column-count: 2;
+}
+
+#resources p, #resources ul {
+  margin-top: 0px;
+  margin-right: 50px;
+}
+
+/* ---------------------------- */
+/* Styling People & Society */
+
+#people-and-society {
+  grid-area: people;
+  padding: 55px 50px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(6, auto);
+  grid-template-areas: 
+    "intro"
+    "nav"
+    "population"
+    "fertility-mortality"
+    "age-structure";
+  grid-gap: 40px;
+  background-color: rgba(172, 48, 50, 0.25);
+  border-radius: 100px;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 0px;
+}
+
+#people-and-society nav {
+  background-color: rgba(172, 48, 50, 0.5);
+}
+
+/* ---------------------------- */
+
+#population {
+  grid-area: population;
+  display: grid;
+  grid-template-columns:  2fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+    "heading egypt-population"
+    "p1 egypt-population"
+    "p2 egypt-population";
+}
+
+#population h3 {
+  grid-area: heading;
+}
+
+#population-p1 {
+  grid-area: p1;
+}
+
+#population-p2 {
+  grid-area: p2;
+}
+
+#egypt-population {
+  grid-area: egypt-population;
+  background-color: rgb(229,204,204);
+  color: rgb(34, 31, 32);
+  height: 700px;
+  margin-top: 110px;
+}
+
+#egypt-population caption,
+#fertility caption,
+#mortality caption,
+#structure caption {
+  color:rgb(255, 255, 255);
+}
+
+#egypt-population th,
+#fertility th,
+#mortality th,
+#structure th {
+  background-color:rgb(229, 131, 131);
+}
+
+#population p {
+  margin: 0px 50px 50px 0px ;
+}
+
+/* ---------------------------- */
+
+#fertility-mortality {
+  grid-area: fertility-mortality;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+    "fertility heading"
+    "fertility p1"
+    "mortality p1";
+}
+
+#fertility-mortality h3 {
+  grid-area: heading;
+}
+
+#fertility-mortality p {
+  grid-area: p1;
+}
+
+#fertility {
+  grid-area: fertility;
+  margin-bottom: 0px;
+}
+
+#mortality {
+  grid-area: mortality;
+  margin-top: 0px;
+}
+
+#fertility-mortality table{
+  height: 525px;
+  background-color: rgb(229,204,204);
+  color: rgb(34, 31, 32);
+
+}
+
+/* ---------------------------- */
+
+#age-structure {
+  grid-area: age-structure;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas: 
+  "heading structure"
+  "p1 structure"
+  "p1 population-pyramid"
+  "p1 population-pyramid";
+}
+
+#age-structure h3 {
+  grid-area: heading;
+}
+
+#age-structure p {
+  grid-area: p1;
+}
+
+#structure {
+  grid-area: structure;
+  margin-bottom: 0px;
+  background-color: rgb(229,204,204);
+  color: rgb(34, 31, 32);
+  margin-top: 0px;
+  margin-left: 40px;
+  margin: 140px 0px 0px 40px;
+  width: 900px;
+}
+
+#population-pyramid {
+  grid-area: population-pyramid;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+#population-pyramid img {
+  width: 900px;
+}
+
+/* ---------------------------- */
+
+#population, #fertility-mortality, #age-structure {
+  background-color:rgb(172, 48, 50);
+  padding: 0px 50px;
+  color: rgb(255, 255, 255);
+  border-radius: 80px;
+}
+
+/* ---------------------------- */
+/* Styling additional info & footer */
+
+#additional-information {
+  grid-area: additional;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: 
+  "heading"
+  "p1"
+  "list";
+}
+
+#additional-information h2 {
+  margin-top: 200px;
+  margin-bottom: 80px;
+  text-align: center;
+  grid-area: heading;
+}
+
+#additional-information p {
+  grid-area: p1;
+  margin-top: 0px;
+  text-align: center;
+}
+
+#additional-information ul {
+  grid-area: list;
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  margin: auto;
+  grid-template-areas:
+      "link-1 link-2 link-3 link-4";
+  list-style-type: none; 
+  text-align: center;
+  padding: 0px 30px;
+}
+
+#additional-information ul li {
+  width: 450px;
+}
+
+#link-1 {
+  grid-area: link-1;
+}
+
+#link-2 {
+  grid-area: link-2;
+}
+
+#link-3 {
+  grid-area: link-3;
+}
+
+#link-4 {
+  grid-area: link-4;
+}
+
+#additional-information ul a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+footer {
+  grid-area: footer;
+  background-color:rgb(243, 211, 143);
+  border-radius: 50px;
+  text-align: center;
+  margin: 100px 0px;
+}
+
+
+/* ---------------------------- */
+/* Styling other general properties */
+
+figcaption, footer {
+  font-size: 30px;
+}
+
+figcaption a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  font-weight: bold;
+  color: rgb(34, 31, 32);
+}
+
+a:default {
+  color: rgb(34, 31, 32);
+}
+
+a:hover {
+  color: rgb(172, 48, 50);
+}
+
+a:active {
+  color: rgb(172, 48, 50);
+}
+
+time {
+  font-weight: bold;
+}
+
+article a:visited, article a {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+article a:hover {
+  font-weight: bold;
+  color: rgb(34, 31, 32);
+}
+
+article p {
+  text-align: justify;
+}
+
+tbody {
+  text-align: center;
+}
+
+table {
+  border-radius: 50px;
+  border-collapse: separate;
+}
+
+table caption {
+  border-radius: 50px 50px 0px 0px;
+  padding: 10px 0px;
+  font-style: italic;
+  font-weight: bold;
+}
