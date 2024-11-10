@@ -804,14 +804,11 @@ figcaption a {
 
 a {
   text-decoration: none;
+  color: rgb(34, 31, 32);
 }
 
 a:visited {
   font-weight: bold;
-  color: rgb(34, 31, 32);
-}
-
-a:default {
   color: rgb(34, 31, 32);
 }
 
