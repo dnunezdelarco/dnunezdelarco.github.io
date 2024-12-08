@@ -329,17 +329,18 @@ grid-area: position;
 .slideshow-container {
   position: relative;
   margin: auto;
-  border-radius: 10px;
   max-width: 600px;
 }
 
 .mySlides {
   display: none;
   max-width: fit-content;
+  
 }
 
 .slideshow-container .mySlides:first-child {
   display: block;
+  
 }
 
 .mySlides figure {
@@ -360,14 +361,14 @@ grid-area: position;
   color: white;
   font-weight: bold;
   font-size: 18px;
-  transition: 0.2s ease;
-  border-radius: 0 3px 3px 0;
+  transition: 0.1s ease;
+  border-radius: 0 50px 50px 0;
   user-select: none;
 }
 
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 50px 0 0 50px ;
 }
 
 .prev:hover, .next:hover {
