@@ -55,7 +55,7 @@ nav {
   justify-content: center; 
   padding: 10px 0; 
   font-size: 23px;
-  margin-bottom: 5%;
+  margin-bottom: 50px;
   white-space: nowrap;
   border-top: solid 3px #334cbb;
   padding-top: 4%;
@@ -72,7 +72,7 @@ nav ul {
   margin: 0; 
   padding: 0; 
   justify-content: space-between;
-  width: 100%; /* Match header's width */
+  width: 100%;
 }
 
 nav a:link, nav a:visited {
@@ -225,6 +225,10 @@ em {
   height: 150px;
 }
 
+.alt2 h3 {
+  font-weight: bold;
+}
+
 #main-experiences .alt article {
   display: grid; 
   grid-template-areas: 
@@ -232,17 +236,18 @@ em {
     "position date"
     "content content";
   grid-template-rows: auto auto auto;
-  grid-template-columns: 3fr auto;
+  grid-template-columns: auto auto;
   margin-top: 30px;
-  max-width: 800px;
+  max-width: 600px;
   padding: 0 40px;
 }
 
-#main-experiences .alt p:first-of-type{
+#main-experiences .alt h3{
   grid-area: employer;
   text-align: left; 
   margin: 0; 
-  white-space: nowrap;
+  max-width: 300px;
+  font-weight: bold;
 }
 
 #main-experiences .alt ul{
@@ -269,12 +274,16 @@ em {
   flex-grow: 1; 
   font-size: 14px;
   font-style: italic;
-  
   margin: 0;
+  font-weight: normal;
 }
 
 .position {
 grid-area: position;
+}
+
+#upcoming {
+  margin-bottom: 10px;
 }
 
 .alt2 {
