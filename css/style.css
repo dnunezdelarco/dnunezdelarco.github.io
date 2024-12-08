@@ -453,3 +453,6 @@ grid-area: position;
   color: #334cbb;
 }
 
+#dots {
+  text-align: center;
+}

@@ -22,15 +22,18 @@
         </ul>
     </nav>
 
-  <!-- I got the base of this script from W3-->
+  <!-- I got the base of this script from W3 -->
     <script>
+      // call the function showSlides to show my first picture (gallery-rollerskate.jpg)
         let slideIndex = 1;
         showSlides(slideIndex);
         
+        // call the function showSlides to show the next picture 
         function plusSlides(n) {
           showSlides(slideIndex += n);
         }
         
+        // current picture shown
         function currentSlide(n) {
           showSlides(slideIndex = n);
         }
@@ -42,17 +45,21 @@
           if (n > slides.length) { slideIndex = 1 }
           if (n < 1) { slideIndex = slides.length }
           
+          // loop through slides and display
           for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
           }
 
+          // loop through dots 
           for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
             dots[i].classList.remove("transitioning");
           }
         
+          // reached final slide
           slides[slideIndex - 1].style.display = "block";
 
+          // iterate through dots through remainder (i.e., if it's the 4th slide, 4%3=1 )
           let activeDotIndex = (slideIndex - 1) % dots.length;
 
           dots[activeDotIndex].classList.add("transitioning");
@@ -83,7 +90,7 @@
             <div class="mySlides fade">
               <p class="numbertext">1 /16</p>
               <figure>
-                <img src="images/gallery-rollerskate.jpg" style="width:100%">
+                <img src="images/gallery-rollerskate.jpg">
                 <figcaption class="text">Rollerskating in Miami.</figcaption>
               </figure>
             </div>
@@ -208,11 +215,13 @@
               </figure>
             </div>
 
+            <!--- left arrow < -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <!--- right arrow > -->
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
 
-          <div style="text-align:center">
+          <div id="dots">
             <p class="dot" onclick="currentSlide(1)"></p>
             <p class="dot" onclick="currentSlide(2)"></p>
             <p class="dot" onclick="currentSlide(3)"></p>
